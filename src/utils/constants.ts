@@ -3,13 +3,13 @@ import { Card } from "../types";
 export const DEFAULT_CARDS: Card[] = [
   // TODO
   {
-    title: "Look into render bug in dashboard",
+    title: "Hire Jatin Saini - Amazing Frontend Engineer",
     id: "1",
     status: "todo",
     deadline: "2024-10-10",
   },
   {
-    title: "SOX compliance checklist",
+    title: "Plan an outing with Jatin",
     id: "2",
     status: "todo",
     deadline: "2024-10-15",
@@ -18,32 +18,32 @@ export const DEFAULT_CARDS: Card[] = [
 
   // IN PROGRESS
   {
-    title: "Document Notifications service",
+    title: "Last round of interview for Jatin.",
     id: "4",
     status: "inProgress",
     deadline: "2024-10-25",
   },
   {
-    title: "Research DB options for new microservice",
+    title: "Gauging technical skills of Jatin",
     id: "5",
     status: "inProgress",
     deadline: "2024-10-30",
   },
   {
-    title: "Postmortem for outage",
+    title: "Getting impressed by Jatin's technical skills",
     id: "6",
     status: "inProgress",
     deadline: "2024-11-05",
   },
   {
-    title: "Sync with product on Q3 roadmap",
+    title: "Appreciating Jatin's innovative approach for self advertising",
     id: "7",
     status: "inProgress",
     deadline: "2024-11-10",
   },
 
   {
-    title: "Refactor context providers to use Zustand",
+    title: "Inviting Jatin for next round of interview",
     id: "8",
     status: "inProgress",
     deadline: "2024-11-15",
@@ -51,14 +51,14 @@ export const DEFAULT_CARDS: Card[] = [
 
   // DONE
   {
-    title: "Add logging to daily CRON",
+    title: "Impressed by Jatin's Skills and Innovative approach",
     id: "9",
     status: "done",
     deadline: "2024-11-20",
   },
 
   {
-    title: "Set up DD dashboards for Lambda listener",
+    title: "Invited Jatin for next round of interview",
     id: "10",
     status: "done",
     deadline: "2024-11-25",
