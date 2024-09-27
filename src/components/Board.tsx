@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Column from "./Column";
-//import BurnBarrel from "./BurnBarrel";
 import { DEFAULT_CARDS } from "../utils/constants";
 import { Card, Status } from "../types";
 
@@ -25,7 +24,6 @@ const Board: React.FC = () => {
           setCards={setCards}
         />
       ))}
-      {/*<BurnBarrel setCards={setCards} />*/}
     </div>
   );
 };
