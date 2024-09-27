@@ -28,17 +28,29 @@ const AddCard: React.FC<AddCardProps> = ({ status, setCards }) => {
     setDeadline("");
   };
 
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Close dialog only if clicking on the backdrop (not the form)
+    if (e.currentTarget === e.target) {
+      setAdding(false);
+      setText("");
+      setDeadline("");
+    }
+  };
+
   return (
     <>
       {adding ? (
-        <motion.div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <motion.div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+          onClick={handleBackdropClick}
+        >
           <motion.form
             layout
             onSubmit={handleSubmit}
             className="bg-neutral-900 p-5 rounded-lg shadow-lg min-w-[40rem]"
           >
             <h2 className="mb-3 text-lg font-medium text-neutral-50">
-              Add New Card
+              Add New Task
             </h2>
             <label className="block mb-1 text-sm text-neutral-200">Title</label>
             <textarea

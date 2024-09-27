@@ -14,7 +14,7 @@ const Board: React.FC = () => {
   ];
 
   return (
-    <div className="flex h-full w-full gap-3 overflow-scroll p-12">
+    <div className="flex h-full w-[80vw] mx-auto gap-8 overflow-scroll p-12">
       {columns.map((col) => (
         <Column
           key={col.status}

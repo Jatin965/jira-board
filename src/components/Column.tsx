@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import CardComponent from "./Card";
 import AddCard from "./AddCard";
 import DropIndicator from "./DropIndicator";
-import { ColumnProps } from "../types";
+import CardDetailDialog from "./CardDetail";
+import { ColumnProps, Card } from "../types";
 import { useDragHandlers } from "../utils/helpers";
 
 const Column: React.FC<ColumnProps> = ({
@@ -15,10 +16,19 @@ const Column: React.FC<ColumnProps> = ({
   const { handleDragStart, handleDragEnd, handleDragOver, handleDragLeave, active } =
     useDragHandlers({ cards, status, setCards });
 
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null);
   const filteredCards = cards.filter((c) => c.status === status);
 
+  const handleCardClick = (card: Card) => {
+    setSelectedCard(card);
+  };
+
+  const handleCloseCardDetail = () => {
+    setSelectedCard(null);
+  };
+
   return (
-    <div className="w-56 shrink-0">
+    <div className="w-56 shrink-0 grow">
       <div className="mb-3 flex items-center justify-between">
         <h3 className={`font-medium ${headingColor}`}>{title}</h3>
         <span className="rounded text-sm text-neutral-400">
@@ -34,11 +44,19 @@ const Column: React.FC<ColumnProps> = ({
         }`}
       >
         {filteredCards.map((c) => (
-          <CardComponent key={c.id} {...c} handleDragStart={handleDragStart} />
+          <CardComponent
+            key={c.id}
+            {...c}
+            handleDragStart={handleDragStart}
+            onClick={() => handleCardClick(c)}
+          />
         ))}
         <DropIndicator beforeId={null} status={status} />
         <AddCard status={status} setCards={setCards} />
       </div>
+      {selectedCard && (
+        <CardDetailDialog card={selectedCard} onClose={handleCloseCardDetail} />
+      )}
     </div>
   );
 };

@@ -129,3 +129,19 @@ export const useDragHandlers = ({
     active,
   };
 };
+
+// Colors
+
+export const getStatusStyles = (status: string) => {
+  switch (status) {
+    case "done":
+      return "bg-green-500 text-white"; 
+    case "todo":
+      return "bg-yellow-500 text-white"; 
+    case "inProgress":
+      return "bg-blue-500 text-white"; 
+    default:
+      return "bg-gray-500 text-white"; 
+  }
+};
+
