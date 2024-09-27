@@ -7,9 +7,9 @@ const Board: React.FC = () => {
   const [cards, setCards] = useState<Card[]>(DEFAULT_CARDS);
 
   const columns: { title: string; status: Status; headingColor: string }[] = [
-    { title: "TODO", status: "todo", headingColor: "text-yellow-200" },
-    { title: "IN PROGRESS", status: "inProgress", headingColor: "text-blue-200" },
-    { title: "DONE", status: "done", headingColor: "text-emerald-200" },
+    { title: "TODO", status: "todo", headingColor: "text-yellow-400" },
+    { title: "IN PROGRESS", status: "inProgress", headingColor: "text-blue-400" },
+    { title: "DONE", status: "done", headingColor: "text-emerald-400" },
   ];
 
   return (
