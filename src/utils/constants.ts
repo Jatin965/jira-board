@@ -14,7 +14,7 @@ export const DEFAULT_CARDS: Card[] = [
     status: "todo",
     deadline: "2024-10-15",
   },
-  { title: "Migrate to Azure", id: "3", status: "todo", deadline: "2024-10-20" },
+  { title: "Issue and Offer letter to Jatin", id: "3", status: "todo", deadline: "2024-10-20" },
 
   // IN PROGRESS
   {
